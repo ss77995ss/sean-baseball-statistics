@@ -1,12 +1,15 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import expect from 'expect'
+import { render, cleanup } from '@testing-library/react'
 
-import Home from '../../../components/home'
+import Home from 'components/home'
 
 describe('<Home />', () => {
-  it('should render correctly', () => {
-    const wrapper = shallow(<Home />)
-    expect(wrapper.find('#home-wrapper').length).toBe(1)
+  afterEach(cleanup)
+
+  describe('render', () => {
+    it('should render correctly', () => {
+      const { getByText } = render(<Home />)
+      expect(getByText('Hello World').textContent).toBe('Hello World')
+    })
   })
 })
