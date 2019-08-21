@@ -18,5 +18,9 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: test
+          name: Linter
+          command: npm run lint
+      - run:
+          name: Front-End UI unit tests
           command: npm test
+
