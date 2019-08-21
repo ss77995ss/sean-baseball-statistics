@@ -1,15 +1,15 @@
-import React from 'react'
-import { render, cleanup } from '@testing-library/react'
+import React from 'react';
+import { render, cleanup } from '@testing-library/react';
 
-import Home from 'components/home'
+import Home from 'components/home';
 
 describe('<Home />', () => {
-  afterEach(cleanup)
+  afterEach(cleanup);
 
   describe('render', () => {
     it('should render correctly', () => {
-      const { getByText } = render(<Home />)
-      expect(getByText('Hello World').textContent).toBe('Hello World')
-    })
-  })
-})
+      const { getByText } = render(<Home />);
+      expect(getByText('Hello World').textContent).toBe('Hello World');
+    });
+  });
+});

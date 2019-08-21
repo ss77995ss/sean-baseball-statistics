@@ -9,14 +9,13 @@
 }
 
 .App-header {
-  min-height: 100vh;
-  align-items: center;
-  background-color: #282c34;
-  color: #fff;
   display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #282c34;
+  flex-direction: column;
 }
 
 .App-link {
