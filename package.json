@@ -16,8 +16,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint $npm_package_path_client && stylelint $npm_package_path_client",
-    "lint:javascript": "eslint $npm_package_path_client",
-    "lint:style": "stylelint $npm_package_path_client"
+    "lint:javascript": "eslint src/client",
+    "lint:javascript:fix": "eslint src/client --fix",
+    "lint:style": "stylelint src/client",
+    "lint:style:fix": "stylelint src/client --fix"
   },
   "husky": {
     "hooks": {
