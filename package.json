@@ -2,6 +2,9 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "path": {
+    "client": "src/client"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -12,7 +15,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/components && stylelint src/assets"
+    "lint": "eslint $npm_package_path_client && stylelint $npm_package_path_client",
+    "lint:javascript": "eslint $npm_package_path_client",
+    "lint:style": "stylelint $npm_package_path_client"
   },
   "husky": {
     "hooks": {
@@ -23,7 +28,9 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --single-quote --write",
       "git add"
-    ]
+    ],
+    "src/client/**/*.{js,jsx}": "npm run lint:javascript",
+    "src/client/assets/*.{css,scss}": "npm run lint:style"
   },
   "browserslist": {
     "production": [
