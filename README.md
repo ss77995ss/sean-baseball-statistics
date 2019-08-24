@@ -4,6 +4,7 @@ To build a system that can let users to store their baseball team's stats
 
 ## Target tools
 * Create react app
+* Testing-library
 * React
 * React hook
 * GraphQL
@@ -15,7 +16,7 @@ To build a system that can let users to store their baseball team's stats
 ## Procedure
 1. Initial environment
 * Use `create react app` to get started
-* Implement `eslint`
+* Implement `eslint` & `stylelint`
 * Set `Circle CI`
 
 2. Design DataBase
@@ -37,4 +38,4 @@ To build a system that can let users to store their baseball team's stats
 
 6. Coming soooooooooooooooon
 
-Should implement `unit test` for every functions
+Use `Jest` & `Testing-library` to do unit testing

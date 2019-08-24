@@ -1,0 +1,35 @@
+{
+    "parser": "babel-eslint",
+    "plugins": ["react", "react-hooks", "babel"],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "amd": true,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": 0,
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": [
+            "node_modules",
+            "src/client",
+          ]
+        }
+      }
+    }
+  }
