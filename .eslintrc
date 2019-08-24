@@ -15,7 +15,10 @@
       "node": true,
       "jest": true
     },
-    "extends": "airbnb",
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
     "rules": {
       "react/jsx-filename-extension": 0,
     },
