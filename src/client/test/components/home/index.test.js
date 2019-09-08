@@ -9,7 +9,9 @@ describe('<Home />', () => {
   describe('render', () => {
     it('should render correctly', () => {
       const { getByText } = render(<Home />);
-      expect(getByText('Hello World').textContent).toBe('Hello World');
+      expect(getByText('Baseball Match Results').textContent).toBe(
+        'Baseball Match Results'
+      );
     });
   });
 });
