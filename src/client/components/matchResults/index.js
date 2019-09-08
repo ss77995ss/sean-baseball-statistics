@@ -5,6 +5,8 @@ import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/styles';
 
+import ScoreKeepByInnings from './scoreKeepByInnings';
+
 const useStyles = makeStyles({
   matchResultsWrapper: {
     textAlign: 'center'
@@ -30,9 +32,7 @@ const MatchResults = () => {
           </Box>
         </Fade>
       ) : (
-        <Button variant="contained" onClick={handleClick}>
-          Back
-        </Button>
+        <ScoreKeepByInnings isScoreKeepOpen={!isOpen} onClick={handleClick} />
       )}
     </div>
   );
