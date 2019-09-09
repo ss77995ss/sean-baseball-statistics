@@ -27,7 +27,7 @@
         "node": {
           "moduleDirectory": [
             "node_modules",
-            "src/client",
+            "src",
           ]
         }
       }

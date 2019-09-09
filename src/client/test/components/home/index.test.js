@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 
-import Home from 'components/home';
+import Home from 'client/components/home';
 
 describe('<Home />', () => {
   afterEach(cleanup);
