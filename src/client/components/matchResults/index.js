@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 const MatchResults = () => {
   const classes = useStyles();
   const [isOpen, setIsOpen] = useState(true);
-  const handleClick = useCallback(() => setIsOpen(!isOpen), [isOpen]);
+  const handleClick = () => setIsOpen(!isOpen);
 
   return (
     <div className={classes.matchResultsWrapper}>
