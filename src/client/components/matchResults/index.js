@@ -5,6 +5,7 @@ import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/styles';
 
+import { titles, buttonText } from 'client/constants/base';
 import ScoreKeepByInnings from './scoreKeepByInnings';
 
 const useStyles = makeStyles({
@@ -24,10 +25,10 @@ const MatchResults = () => {
         <Fade in={isOpen}>
           <Box>
             <Typography variant="h4" component="h1">
-              Baseball Match Results
+              {titles.matchResult}
             </Typography>
             <Button variant="contained" onClick={handleClick}>
-              Scorekeeping by Innings
+              {buttonText.scoreKeepByInning}
             </Button>
           </Box>
         </Fade>
