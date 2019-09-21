@@ -7,7 +7,7 @@ import { Button } from '@material-ui/core';
 
 import { titles, buttonText } from 'client/constants/base';
 
-const ByInnScoreKeep = ({ isScoreKeepOpen, onClick }) => (
+const ScoreKeepByInnings = ({ isScoreKeepOpen, onClick }) => (
   <Fade in={isScoreKeepOpen}>
     <Box>
       <Typography variant="h4" component="h1">
@@ -20,9 +20,9 @@ const ByInnScoreKeep = ({ isScoreKeepOpen, onClick }) => (
   </Fade>
 );
 
-ByInnScoreKeep.propTypes = {
+ScoreKeepByInnings.propTypes = {
   isScoreKeepOpen: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
-export default ByInnScoreKeep;
+export default ScoreKeepByInnings;
