@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 import Home from 'client/components/home';
 
@@ -8,10 +9,9 @@ describe('<Home />', () => {
 
   describe('render', () => {
     it('should render correctly', () => {
-      const { getByText } = render(<Home />);
-      expect(getByText('Baseball Match Results').textContent).toBe(
-        'Baseball Match Results'
-      );
+      const { getByTestId } = render(<Home />);
+
+      expect(getByTestId('home-wrapper')).toBeInTheDocument();
     });
   });
 });
