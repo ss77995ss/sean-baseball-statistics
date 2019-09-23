@@ -8,16 +8,20 @@ describe('<ScoreKeepByInnings />', () => {
   afterEach(cleanup);
 
   describe('render', () => {
-    it('should render correctly', () => {
-      const mockOnClick = jest.fn();
-      const { getByText, queryByText } = render(
-        <ScoreKeepByInnings isScoreKeepOpen onClick={mockOnClick} />
-      );
+    const setup = mockFn =>
+      render(<ScoreKeepByInnings isScoreKeepOpen onClick={mockFn} />);
+
+    it('should render title correctly', () => {
+      const { queryByText } = setup(jest.fn());
 
       expect(queryByText(titles.scoreKeepByInning)).not.toBeNull();
+    });
+
+    it(`should have called onClick function after click '${buttonText.backToHome}'`, () => {
+      const mockOnClick = jest.fn();
+      const { getByText } = setup(mockOnClick);
 
       fireEvent.click(getByText(buttonText.backToHome));
-
       expect(mockOnClick).toHaveBeenCalled();
     });
   });

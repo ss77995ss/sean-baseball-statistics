@@ -8,7 +8,7 @@ describe('<Home />', () => {
   afterEach(cleanup);
 
   describe('render', () => {
-    it('should render correctly', () => {
+    it('should render `home-wrapper`', () => {
       const { getByTestId } = render(<Home />);
 
       expect(getByTestId('home-wrapper')).toBeInTheDocument();
